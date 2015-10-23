@@ -38,6 +38,12 @@
     <com.reaper.settings.preferences.SystemSettingSwitchPreference
         android:key="show_lockscreen_date"
         android:title="@string/lockscreen_date_title"
-        android:defaultValue="true" />                        
+        android:defaultValue="true" />
+        
+    <com.reaper.settings.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_scramble_pin_layout"
+        android:title="@string/unlock_scramble_pin_layout_title"
+        android:summary="@string/unlock_scramble_pin_layout_summary"
+        android:defaultValue="false" />    
 
 </PreferenceScreen>
