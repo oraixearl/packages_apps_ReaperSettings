@@ -149,7 +149,10 @@
     <string name="lockscreen_alarm_title">Lockscreen alarm text</string>
     <!-- Pin scramble -->
     <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
-    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>        
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
+    <!-- Lockscreen torch -->
+    <string name="keyguard_torch_title">Lockscreen torch</string>
+    <string name="keyguard_torch_summary">Longpress power button with screen off turns on torch</string>        
     
     <!-- Navbar fragment -->
     <string name="navbar_settings_title">Navigation bar</string>

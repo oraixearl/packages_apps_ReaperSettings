@@ -252,7 +252,7 @@
         <item>15</item>
         <item>16</item>
         <item>17</item>
-    </string-array    
+    </string-array>    
     
     <!-- notification light pulse -->
     <string-array name="notification_pulse_length_entries" translatable="false">
