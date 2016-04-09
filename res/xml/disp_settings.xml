@@ -34,6 +34,13 @@
         android:key="density_changer"
         android:fragment="com.android.settings.util.Density"
         android:title="@string/lcd_density_title" />        
+
+
+    <com.reaper.settings.preferences.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="false" />
         
     <com.reaper.settings.preferences.GlobalSettingSwitchPreference
         android:key="wake_when_plugged_or_unplugged"
