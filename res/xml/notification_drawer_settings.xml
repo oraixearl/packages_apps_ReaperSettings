@@ -66,6 +66,12 @@
         android:key="animations"
         android:fragment="com.reaper.settings.fragments.Animations"
         android:title="@string/quicksettings_tiles_category" />
+        
+    <com.reaper.settings.preferences.SecureSettingSwitchPreference
+        android:key="qs_bt_easy_toggle"
+        android:title="@string/qs_bt_easy_toggle_title"
+        android:summary="@string/qs_bt_easy_toggle_summary"
+        android:defaultValue="false" />        
 
     <com.reaper.settings.preferences.SecureSettingSwitchPreference
          android:key="qs_wifi_easy_toggle"
@@ -73,7 +79,7 @@
          android:summary="@string/qs_wifi_easy_toggle_summary"
          android:defaultValue="false" />
 
-    <com.reaper.settings.preferences.SystemSettingSwitchPreference
+    <com.reaper.settings.preferences.SecureSettingSwitchPreference
          android:key="quick_settings_vibrate"
          android:title="@string/quick_settings_vibrate_title"
          android:summary="@string/quick_settings_vibrate_summary"
