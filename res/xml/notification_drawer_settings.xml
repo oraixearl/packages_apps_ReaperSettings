@@ -62,6 +62,11 @@
         android:entryValues="@array/smart_pulldown_values"
         android:persistent="false" />
 
+    <Preference
+        android:key="animations"
+        android:fragment="com.reaper.settings.fragments.Animations"
+        android:title="@string/quicksettings_tiles_category" />
+
     <com.reaper.settings.preferences.SecureSettingSwitchPreference
          android:key="qs_wifi_easy_toggle"
          android:title="@string/qs_wifi_easy_toggle_title"
