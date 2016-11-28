@@ -265,6 +265,9 @@
     <string name="quick_pulldown_left">Left</string>
     <string name="quick_pulldown_right">Right</string>
     <string name="quick_pulldown_always">Always</string>
+    <!-- Quicks settings titles -->
+    <string name="qs_tile_title_visibility_title">Quick settings titles</string>
+    <string name="qs_tile_title_visibility_summary">Enable titles on quick settings</string>
     <!-- Quicks settings vibrate -->
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
     <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
