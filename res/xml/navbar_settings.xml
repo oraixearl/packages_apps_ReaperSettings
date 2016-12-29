@@ -15,6 +15,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.reaper.settings.preferences.SystemSettingSwitchPreference
+        android:key="navigation_bar_show"
+        android:summary="@string/navbar_enable_summary"
+        android:title="@string/navbar_enable_bar"
+        android:defaultValue="true" />
+
     <com.reaper.settings.preferences.SecureSettingSwitchPreference
         android:key="kill_app_longpress_back"
         android:title="@string/kill_app_longpress_back"
@@ -30,6 +36,13 @@
         settings:units="ms"
         android:persistent="false"
         android:dependency="kill_app_longpress_back" />
+
+    <PreferenceScreen
+        android:fragment="com.reaper.settings.fragments.NavBarDimensSettings"
+        android:key="navbar_dimens"
+        android:summary="@string/navbar_dimensions_summary"
+        android:title="@string/navbar_dimensions_title"
+        android:dependency="navigation_bar_show" />
         
     <PreferenceScreen
         android:title="@string/navbar_tuner_title"
