@@ -46,6 +46,12 @@
             android:title="@string/headsup_settings_title" />
 
         <com.pure.settings.preferences.SystemSettingSwitchPreference
+            android:key="toast_icon"
+            android:title="@string/toast_icon_title"
+            android:summary="@string/toast_icon_summary"
+            android:defaultValue="false" />
+
+        <com.pure.settings.preferences.SystemSettingSwitchPreference
             android:key="battery_low_notification"
             android:title="@string/battery_low_notif_title"
             android:summary="@string/battery_low_notif_summary"
