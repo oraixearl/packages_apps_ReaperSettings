@@ -197,6 +197,10 @@
     <string name="notification_drawer_settings_title">Quick settings drawer</string>
     <string name="notification_panel_title">Quick settings panel</string>
     <string name="qs_panel_title">Quick settings panel</string>
+    
+    <!-- Disable Quicks settings -->
+    <string name="lockscreen_qs_disabled_title">Disable quick settings</string>
+    <string name="lockscreen_qs_disabled_summary">Disables quick settings on secure lockscreen</string>
     <!-- Advanced data tile -->
     <string name="qs_advanced_data_title">Advanced data tile</string>
     <string name="qs_advanced_data_summary">Enable one tap action to enable or disable data</string>
@@ -294,7 +298,21 @@
     <!-- BT easy toggle  -->
     <string name="qs_bt_easy_toggle_title">Enable Bluetooth easy toggle</string>
     <string name="qs_bt_easy_toggle_summary">Enable bluetooth without selection window</string>    
-    
+    <!-- QS headers -->
+    <string name="qs_header_category">Quick settings header</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+    <string name="daylight_header_pack_title">Header image pack</string>
+    <string name="status_bar_custom_header_shadow_title">Shadow header image</string>
+    <string name="status_bar_custom_header_shadow_summary">For better visibility on bright images</string>
+    <string name="static_header_provider" translatable="false">static</string>
+    <string name="daylight_header_provider" translatable="false">daylight</string>
+    <string name="static_header_provider_title">Static</string>
+    <string name="daylight_header_provider_title">Dynamic</string>
+    <string name="custom_header_provider_title">Header provider</string>
+    <string name="custom_header_browse_title">Browse installed headers</string>
+    <string name="custom_header_browse_summary">Long press on any image to use for static mode</string>
+
     <!-- Notification & Media fragment -->
     <string name="notification_media_settings_title">Media &amp; notifications</string>
     <string name="media_cat_title">Media options</string>
