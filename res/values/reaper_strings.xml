@@ -129,6 +129,9 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar tuner</string>
     <string name="navbar_tuner_summary">Customize buttons and layout</string>
+    <!-- One handed mode -->
+    <string name="one_handed_mode_title">One Handed mode</string>
+    <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
     
     <!-- Optional screenshot type -->
     <string name="screenshot_type_category">Screenshot</string>
