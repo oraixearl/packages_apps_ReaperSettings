@@ -187,6 +187,12 @@
     <string name="one_handed_mode_title">One Handed mode</string>
     <string name="one_handed_mode_summary">Allows swiping on the navigation bar to enable one handed mode</string>
     
+    <!-- OmniJaws -->
+    <string name="weather_title">Weather</string>
+    <string name="weather_config_title">Service settings</string>
+    <string name="weather_config_summary"></string>
+    <string name="weather_icon_pack_title">Condition icon pack</string>
+    
     <!-- Optional screenshot type -->
     <string name="screenshot_type_category">Screenshot</string>
     <string name="screenshot_type_title">Screenshot type</string>
