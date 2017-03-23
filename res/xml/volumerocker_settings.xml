@@ -15,6 +15,18 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    
+    <com.reaper.settings.preferences.SecureSettingSwitchPreference
+        android:key="sysui_show_full_zen"
+        android:title="@string/vol_zen_title"
+        android:summary="@string/vol_zen_summary"
+        android:defaultValue="false"/>
+        
+    <com.reaper.settings.preferences.SystemSettingSwitchPreference
+        android:key="volbtn_music_controls"
+        android:title="@string/volbtn_music_controls_title"
+        android:summary="@string/volbtn_music_controls_summary"
+        android:defaultValue="false" />    
 
     <com.reaper.settings.preferences.SecureSettingSwitchPreference
         android:key="sysui_volume_down_silent"
@@ -28,23 +40,17 @@
         android:summary="@string/volbtn_up_zen_summary"
         android:defaultValue="true" />
 
-    <com.reaper.settings.preferences.SecureSettingSwitchPreference
-        android:key="sysui_show_full_zen"
-        android:title="@string/vol_zen_title"
-        android:summary="@string/vol_zen_summary"
-        android:defaultValue="false"/>
-
     <com.reaper.settings.preferences.SystemSettingSwitchPreference
         android:key="volume_wake_screen"
         android:title="@string/volbtn_wake_device_title"
         android:summary="@string/button_wake_summary"
         android:defaultValue="false" />
-
-    <com.reaper.settings.preferences.SystemSettingSwitchPreference
-        android:key="volbtn_music_controls"
-        android:title="@string/volbtn_music_controls_title"
-        android:summary="@string/volbtn_music_controls_summary"
-        android:defaultValue="false" />
+        
+    <ListPreference
+        android:key="screenshot_type"
+        android:title="@string/screenshot_type_category"
+        android:entries="@array/screenshot_type_entries"
+        android:entryValues="@array/screenshot_type_values" />    
 
     <ListPreference
         android:key="volume_key_cursor_control"
@@ -53,11 +59,5 @@
         android:entries="@array/volbtn_cursor_control_entries"
         android:entryValues="@array/volbtn_cursor_control_values"
         android:persistent="false" />
-
-    <ListPreference
-        android:key="screenshot_type"
-        android:title="@string/screenshot_type_category"
-        android:entries="@array/screenshot_type_entries"
-        android:entryValues="@array/screenshot_type_values" />        
-
+    
 </PreferenceScreen>
