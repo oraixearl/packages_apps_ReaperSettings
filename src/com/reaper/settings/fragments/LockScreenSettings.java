@@ -16,7 +16,11 @@
 
 package com.reaper.settings.fragments;
 
+import android.content.ContentResolver;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
@@ -26,19 +30,30 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.reaper.settings.utils.Utils;
 import com.reaper.settings.preferences.SystemSettingSwitchPreference;
 
-public class LockScreenSettings extends SettingsPreferenceFragment {
+public class LockScreenSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String KEYGUARD_TORCH = "keyguard_toggle_torch";
 
     private SystemSettingSwitchPreference mLsTorch;
+
+    private static final String LOCK_CLOCK_FONTS = "lock_clock_fonts";
+
+    private ListPreference mLockClockFonts;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreen_settings);
         PreferenceScreen prefScreen = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
 
-        mLsTorch = (SystemSettingSwitchPreference) findPreference(KEYGUARD_TORCH);
+        mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONTS);
+        mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
+                resolver, Settings.System.LOCK_CLOCK_FONTS, 4)));
+        mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+        mLockClockFonts.setOnPreferenceChangeListener(this);
+		mLsTorch = (SystemSettingSwitchPreference) findPreference(KEYGUARD_TORCH);
         if (!Utils.deviceSupportsFlashLight(getActivity())) {
             prefScreen.removePreference(mLsTorch);
         }
@@ -48,5 +63,16 @@ public class LockScreenSettings extends SettingsPreferenceFragment {
     protected int getMetricsCategory() {
         return MetricsEvent.REAPER;
     }
-}
 
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mLockClockFonts) {
+            Settings.System.putInt(resolver, Settings.System.LOCK_CLOCK_FONTS,
+                    Integer.valueOf((String) newValue));
+            mLockClockFonts.setValue(String.valueOf(newValue));
+            mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+            return true;
+        }
+        return false;
+    }
+}
